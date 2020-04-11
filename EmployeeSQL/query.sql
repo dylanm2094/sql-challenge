@@ -110,3 +110,9 @@ SELECT last_name, count(last_name) as "Frequency"
 FROM employees
 GROUP BY 1
 ORDER BY "Frequency" DESC;
+
+-- Epilouge
+SELECT e.emp_no, e.last_name, e.first_name, e.gender, s.salary
+FROM employees e
+JOIN salaries s ON s.emp_no = e.emp_no
+WHERE e.emp_no = 499942;
